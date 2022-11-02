@@ -40,6 +40,9 @@ const map = new maplibregl.Map({
 
 map.on('load', () => {
 
+  map.setLayoutProperty('building-3d', 'visibility', 'visible');
+  map.setLayoutProperty('structure-3d', 'visibility', 'visible');
+
   map.addSource('terrainSource', {
     type: 'raster-dem',
     url: 'https://tileserver.geolonia.com/gsi-dem/tiles.json?key=YOUR-API-KEY',
